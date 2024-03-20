@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>upload file</title>
+    </head>
+    <body>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileImage" />
+            <button type="submit">upload</button>
+        </form>
+        <% if (img && img.trim() !== "") { %>
+            <img src="/uploads/<%= img %>" height="500" width="500"/>
+        <% } %>
+        
+    </body>
+</html>
